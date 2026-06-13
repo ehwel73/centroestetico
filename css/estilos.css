@@ -27,7 +27,7 @@ body{
     url("../img/hero.jpg");
 
     background-size:100%;
-    background-position:center 10%;
+    background-position:center 30%;
 
     display:flex;
     flex-direction:column;
