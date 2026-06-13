@@ -21,12 +21,12 @@ body{
 
     background:
     linear-gradient(
-        rgba(20,10,20,.65),
-        rgba(20,10,20,.65)
+        rgba(20,10,20,.75),
+        rgba(20,10,20,.75)
     ),
     url("../img/hero.jpg");
 
-    background-size:cover;
+    background-size:100%;
     background-position:center;
 
     display:flex;
@@ -42,11 +42,11 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 80px;
+    padding:25px 50px;
 }
 
 .logo{
-    font-size:1.8rem;
+    font-size:1.4rem;
     font-family:'Cormorant Garamond',serif;
     font-weight:600;
 }
@@ -55,6 +55,7 @@ body{
     display:flex;
     gap:35px;
     list-style:none;
+    align-items:center;
 }
 
 .menu a{
@@ -120,7 +121,7 @@ body{
 .hero h1{
     font-family:'Cormorant Garamond',serif;
 
-    font-size:5.5rem;
+    font-size:6rem;
 
     font-weight:400;
 
@@ -135,7 +136,7 @@ body{
 }
 
 .hero p{
-    max-width:650px;
+    max-width:500px;
 
     font-size:1.1rem;
 
@@ -159,7 +160,7 @@ body{
 
     text-decoration:none;
 
-    padding:16px 35px;
+    padding:16px 40px;
 
     border-radius:8px;
 
