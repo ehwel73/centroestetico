@@ -195,6 +195,35 @@ body{
     color:#333;
 }
 
+.stats{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+
+    margin-top:80px;
+
+    flex-wrap:wrap;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.5rem;
+    color:white;
+    font-weight:500;
+}
+
+.stat p{
+    font-size:.9rem;
+    color:rgba(255,255,255,.75);
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
 /* SECCIONES */
 
 section{
