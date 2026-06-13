@@ -336,6 +336,35 @@ h2{
 
 @media (max-width: 768px){
 
+    /* Ocultar menú */
+
+    .menu{
+        display:none;
+    }
+
+    /* Navbar más compacta */
+
+    .navbar{
+        padding:20px;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    .logo{
+        font-size:1.8rem;
+    }
+
+    .btn-nav{
+        padding:12px 18px;
+        font-size:.9rem;
+    }
+
+    /* Hero */
+
+    .hero{
+        min-height:100vh;
+    }
+
     .hero h1{
         font-size:4rem;
     }
@@ -345,35 +374,53 @@ h2{
         font-size:1rem;
     }
 
-    .stats{
+    /* Botones */
+
+    .hero-buttons{
         flex-direction:column;
-        gap:25px;
-
-        max-width:100%;
-    }
-
-    .stat{
         width:100%;
-        padding:0;
+        align-items:center;
     }
 
-    .stat:not(:last-child)::after{
+    .btn-primary,
+    .btn-secondary{
+        width:280px;
+        text-align:center;
+    }
+
+    /* Estadísticas */
+
+    .stats-line{
         display:none;
     }
 
-    .stats-line{
-        width:250px;
-    }
+    .stats{
+        display:flex;
+        flex-direction:row;
 
-    .navbar{
-        padding:20px;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .menu{
-        gap:20px;
-        flex-wrap:wrap;
         justify-content:center;
+
+        gap:10px;
+
+        margin-top:40px;
     }
+
+    .stat{
+        min-width:auto;
+        padding:0 10px;
+    }
+
+    .stat h3{
+        font-size:1.4rem;
+    }
+
+    .stat p{
+        font-size:.55rem;
+        letter-spacing:1px;
+    }
+
+    .stat:not(:last-child)::after{
+        height:35px;
+    }
+
 }
