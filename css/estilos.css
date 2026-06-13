@@ -195,19 +195,11 @@ body{
     color:#333;
 }
 
-.stats{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:80px;
-
-    margin-top:80px;
-
-    flex-wrap:wrap;
-}
 
 .stat{
     text-align:center;
+    padding:0 40px;
+    position:relative;
 }
 
 .stat h3{
@@ -222,6 +214,20 @@ body{
     color:rgba(255,255,255,.75);
     text-transform:uppercase;
     letter-spacing:2px;
+}
+
+.stat:not(:last-child)::after{
+    content:"";
+    position:absolute;
+
+    right:0;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:1px;
+    height:50px;
+    background:rgba(255,255,255,.2);
 }
 
 /* SECCIONES */
