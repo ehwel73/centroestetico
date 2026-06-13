@@ -6,50 +6,64 @@
     <title>Centro Estético</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <header class="hero">
-    <h1>Real Beauty</h1>
 
-    <p>
-        Centro de estética especializado en tratamientos faciales,
-        manicura y pedicura.
-    </p>
+    <nav class="navbar">
+        <div class="logo">Real Beauty</div>
 
-    <a class="btn-whatsapp"
-       href="https://wa.me/34682008858"
-       target="_blank">
-        Reservar cita
-    </a>
-</header>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotras">Nosotras</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-<section id="servicios">
+        <a class="btn-nav" href="https://wa.me/34682008858">
+            Reservar cita
+        </a>
+    </nav>
 
-    <h2>Tratamientos Faciales</h2>
+    <div class="hero-content">
 
-    <div class="servicios-grid">
+        <span class="subtitle">
+            CENTRO DE ESTÉTICA · SANTANDER
+        </span>
 
-        <div class="card">
-            <h3>Facial Personalizado Normal</h3>
-            <p>50 €</p>
-        </div>
+        <h1>
+            Tu belleza,<br>
+            <span>tu momento.</span>
+        </h1>
 
-        <div class="card">
-            <h3>Facial Premium</h3>
-            <p>70 €</p>
-        </div>
+        <p>
+            Especialistas en tratamientos faciales,
+            manicura y pedicura profesional.
+        </p>
 
-        <div class="card">
-            <h3>Hydrafacial</h3>
-            <p>70 €</p>
+        <div class="hero-buttons">
+
+            <a class="btn-primary"
+               href="https://wa.me/34682008858">
+               Reservar cita
+            </a>
+
+            <a class="btn-secondary"
+               href="#servicios">
+               Ver servicios
+            </a>
+
         </div>
 
     </div>
 
-</section>
-
-    <script src="js/main.js"></script>
+</header>
 
 </body>
 </html>
