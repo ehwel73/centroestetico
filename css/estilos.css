@@ -33,26 +33,69 @@ body{
     flex-direction:column;
 
     color:#d98ab0;
+
+    padding-top:100px;
 }
 
 /* NAVBAR */
 
 .navbar{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 50px;
+    padding:14px 50px;
+
+    z-index:1000;
+
+    transition:.3s;
+}
+
+.navbar.scrolled{
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+.navbar.scrolled .logo{
+    color:#222;
+}
+
+.navbar.scrolled .menu a{
+    color:#222;
+}
+
+.navbar.scrolled .menu a:hover{
+    color:#c45b8c;
+}
+
+.logo,
+.menu a,
+.btn-nav{
+    transition:.3s;
 }
 
 .logo{
+    text-decoration:none;
     font-size:1.4rem;
     font-family:'Cormorant Garamond',serif;
-    font-weight:600;
+    font-weight:500;
     color:white;
 }
 
 .menu{
+    font-size:.8rem;
+    letter-spacing:.5px;
     display:flex;
     gap:35px;
     list-style:none;
@@ -62,8 +105,9 @@ body{
 .menu a{
     text-decoration:none;
     color:white;
-    font-size:0.95rem;
+    font-size:0.9rem;
     transition:.3s;
+    letter-spacing:.5px;
 }
 
 .menu a:hover{
@@ -75,8 +119,8 @@ body{
 
     background:#c45b8c;
     color:white;
-
-    padding:12px 25px;
+    font-size:.9rem;
+    padding:12px 24px;
 
     border-radius:8px;
 
@@ -330,6 +374,312 @@ h2{
     font-weight:700;
 
     font-size:1.1rem;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+    
+    padding:40px 50px;
+    
+    max-width:1000px;
+
+    margin:40px auto;
+
+    margin-bottom:50px;
+
+    background:white;
+
+    border:1px solid #f0e4ea;
+
+    border-radius:8px;
+
+    overflow:hidden;
+}
+
+.beneficio{
+    padding:12px 22px;
+}
+
+.beneficio:not(:last-child){
+    border-right:1px solid #f0e4ea;
+}
+
+.numero{
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:#d9b7c6;
+
+    margin-bottom:6px;
+}
+
+.beneficio h3{
+    font-size:1rem;
+
+    margin-bottom:10px;
+
+    color:#222;
+}
+
+.beneficio p{
+    font-size:.85rem;
+
+    color:#777;
+
+    line-height:1.6;
+}
+
+.section-separator{
+    width:500px;
+    height:1px;
+
+    background:#e7d3dc;
+
+    margin:10px auto;
+}
+
+/* SERVICIOS */
+
+.servicios{
+    width:90%;
+    max-width:1500px;
+    margin:-120px auto 120px auto;
+    
+}
+
+.servicios-wrapper{
+    background:#fdf7f9;
+
+    padding:80px 0;
+}
+
+.section-header{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+    
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-header.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+.section-subtitle{
+    color:#c45b8c;
+    letter-spacing:3px;
+    font-size:.8rem;
+}
+
+.section-header h2{
+    font-size:3.5rem;
+    line-height:1.1;
+    max-width:800px;
+    margin:auto;
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.tab-btn{
+    background:transparent;
+    border:1px solid #c45b8c;
+
+    border-radius:999px;
+
+    padding:10px 22px;
+
+    color:#c45b8c;
+
+    font-size:.8rem;
+
+    font-weight:550;
+
+    transition:.3s;
+}
+
+.tab-btn:hover{
+    background:#c45b8c;
+    color:white;
+}
+
+.tab-btn.active{
+    background:#c45b8c;
+    color:white;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.servicios-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:14px;
+}
+
+.servicio-item{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    border:1px solid #efd8e2;
+
+    border-radius:12px;
+
+    background:white;
+
+    transition:.3s;
+}
+
+.servicio-item:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.04);
+}
+
+.servicio-item span:first-child{
+    font-size:.95rem;
+    color:#333;
+}
+
+.servicio-item span:last-child{
+    color:#c45b8c;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.5rem;
+
+    white-space:nowrap;
+}
+
+.section-divider{
+    width:50px;
+    height:2px;
+
+    background:#c45b8c;
+
+    margin:25px auto;
+
+    transition:width .8s ease .4s;
+}
+
+.section-header.show .section-divider{
+    width:50px;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.services-description{
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    text-align:center;
+
+    color:#777;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+}
+
+.services-cta{
+    text-align:center;
+
+    margin-top:40px;
+}
+
+.services-cta p{
+    color:#777;
+
+    margin-bottom:20px;
+}
+
+.btn-whatsapp-services{
+    display:inline-block;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    font-weight:600;
+}
+
+.pulse-dot{
+    display:inline-block;
+
+    width:8px;
+    height:8px;
+
+    background:#c45b8c;
+
+    border-radius:50%;
+
+    margin-right:8px;
+
+    animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(196,91,140,.7);
+    }
+
+    70%{
+        transform:scale(1.1);
+        box-shadow:0 0 0 10px rgba(196,91,140,0);
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(196,91,140,0);
+    }
+
 }
 
 /* MÓVIL */
