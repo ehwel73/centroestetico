@@ -35,7 +35,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-const sectionHeader = document.querySelector(".section-header");
+const sectionHeaders = document.querySelectorAll(".section-header");
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -51,6 +51,7 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
-observer.observe(sectionHeader);
-
+sectionHeaders.forEach(header => {
+    observer.observe(header);
+});
 

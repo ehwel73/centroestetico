@@ -194,6 +194,42 @@ body{
 
 /* BOTONES */
 
+.whatsapp-float{
+    position:fixed;
+
+    right:25px;
+    bottom:60px;
+
+    width:65px;
+    height:65px;
+
+    background:#25D366;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:
+    0 10px 25px rgba(37,211,102,.3);
+
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-float i{
+    color:white;
+    font-size:2rem;
+}
+
 .hero-buttons{
     display:flex;
     gap:20px;
@@ -450,7 +486,8 @@ h2{
 .servicios{
     width:90%;
     max-width:1500px;
-    margin:-120px auto 120px auto;
+    margin:-120px auto 80px auto;
+     margin-bottom:0px;
     
 }
 
@@ -458,6 +495,9 @@ h2{
     background:#fdf7f9;
 
     padding:80px 0;
+
+    padding-bottom: 0px;
+
 }
 
 .section-header{
@@ -550,7 +590,7 @@ h2{
 
     align-items:center;
 
-    padding:18px 20px;
+    padding:14px 18px;
 
     border:1px solid #efd8e2;
 
@@ -624,16 +664,35 @@ h2{
     text-align:center;
 
     margin-top:40px;
+
+
+    margin-bottom:40px;
+
+    padding-top:30px;
+
+    border-top:1px solid #ecd8e2;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .services-cta p{
-    color:#777;
+    color:#8a8a8a;
 
     margin-bottom:20px;
+
+    font-size:.95rem;
+
 }
 
 .btn-whatsapp-services{
-    display:inline-block;
+    display:inline-Flex;
+
+    align-items:center;
+
+    gap:10px;
 
     background:#25D366;
 
@@ -646,6 +705,10 @@ h2{
     border-radius:999px;
 
     font-weight:600;
+}
+
+.btn-whatsapp-services i{
+    font-size:1.3rem;
 }
 
 .pulse-dot{
@@ -681,6 +744,235 @@ h2{
     }
 
 }
+
+.nosotras{
+    padding:96px 0;
+    background:white;
+}
+
+.nosotras-grid{
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.nosotras-image{
+    position:relative;
+}
+
+.nosotras-image img{
+    max-width:460px;
+    width:100%;
+    border-radius:14px;
+    display:block;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.image-card{
+    position:absolute;
+
+    right:-20px;
+    bottom:-20px;
+
+    background:#c45b8c;
+
+    color:white;
+
+    padding:22px 30px;
+
+    border-radius:12px;
+
+    text-align:center;
+}
+
+.image-card h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.image-card span{
+    font-size:.62rem;
+    letter-spacing:.08em;
+}
+
+.nosotras-content h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.9rem;
+
+    line-height:1.1;
+
+    margin:20px 0;
+}
+
+.nosotras-content h2 span{
+    display:block;
+    
+    color:#c45b8c;
+
+    font-style:italic;
+
+    font-weight:400;
+}
+
+.nosotras-content blockquote{
+    border-left:2px solid #c45b8c;
+
+    padding-left:20px;
+
+    margin:35px 0;
+
+    color:#c45b8c;
+
+    font-style:italic;
+
+    font-size:1.35rem;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.about-list{
+    list-style:none;
+
+    margin:35px 0;
+}
+
+.about-list li{
+    margin-bottom:16px;
+    font-size:.875rem;
+    color:#444;
+}
+
+.about-list li::before{
+    content:"✓";
+
+    color:#c45b8c;
+
+    font-weight:bold;
+
+    margin-right:12px;
+}
+
+.about-btn{
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    background:#c45b8c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.about-btn:hover{
+    opacity:.9;
+}
+
+/*galeria*/
+
+/* GALERÍA */
+
+.galeria{
+    padding:120px 0;
+
+    background:#fdf7f9;
+}
+
+.galeria-grid{
+    width:90%;
+
+    max-width:1400px;
+
+    margin:60px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.galeria-item{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    cursor:pointer;
+}
+
+.galeria-item img{
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s ease;
+}
+
+.galeria-overlay{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:20px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.15),
+        transparent
+    );
+}
+
+.galeria-overlay span{
+    color:white;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.galeria-item:hover img{
+    transform:scale(1.05);
+}
+
+
 
 /* MÓVIL */
 
