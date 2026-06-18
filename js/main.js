@@ -81,3 +81,45 @@ hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
 
 });
+
+const btnManicura = document.querySelector(".btn-especialista.manicura");
+const btnEstetica = document.querySelector(".btn-especialista.estetica");
+
+function enviarWhatsApp(numero) {
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const email = document.getElementById("email").value;
+    const servicio = document.getElementById("servicio").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto = `Hola, quiero reservar una cita.
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Email: ${email}
+Servicio: ${servicio}
+
+Mensaje:
+${mensaje}`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+}
+
+btnManicura.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    enviarWhatsApp("34634370162");
+
+});
+
+btnEstetica.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    enviarWhatsApp("34682008858");
+
+});

@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Estético</title>
+    <meta name="description"
+        content="Centro de estética en Santander especializado en manicura, pedicura, tratamientos faciales, pestañas y cejas. Reserva tu cita en Real Beauty.">
+    <meta property="og:title" content="Centro Real Beauty">
+    <meta property="og:description"
+        content="Centro de estética especializado en manicura, pedicura, tratamientos faciales, pestañas y cejas.">
+    <meta property="og:image" content="img/real-logo.jpeg">
+    <meta property="og:type" content="website">
+
+    <title>Centro Estético Real Beauty | Estética en Santander</title>
 
     <link rel="stylesheet" href="css/estilos.css">
-
+    <link rel="icon" href="img/real-logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -1138,7 +1146,7 @@
 
                             <label>Nombre *</label>
 
-                            <input type="text" placeholder="Tu nombre">
+                            <input id="nombre" type="text" placeholder="Tu nombre">
 
                         </div>
 
@@ -1146,7 +1154,7 @@
 
                             <label>Teléfono *</label>
 
-                            <input type="tel" placeholder="Tu teléfono">
+                            <input id="telefono" type="tel" placeholder="Tu teléfono">
 
                         </div>
 
@@ -1156,7 +1164,7 @@
 
                         <label>Email</label>
 
-                        <input type="email" placeholder="tu@email.com">
+                        <input id="email" type="email" placeholder="tu@email.com">
 
                     </div>
 
@@ -1164,7 +1172,7 @@
 
                         <label>Servicio</label>
 
-                        <select>
+                        <select id="servicio">
 
                             <option>Selecciona un servicio</option>
 
@@ -1185,8 +1193,9 @@
                             Mensaje o preferencia horaria
                         </label>
 
-                        <textarea rows="5" placeholder="¿Qué día y hora prefieres?">
-                    </textarea>
+                        <textarea id="mensaje" rows="5" placeholder="¿Qué día y hora prefieres?">
+
+                        </textarea>
 
                     </div>
 
@@ -1196,14 +1205,14 @@
 
                     <div class="contacto-botones">
 
-                        <a href="https://wa.me/34634370162" class="btn-especialista manicura">
+                        <a href="#" class="btn-especialista manicura">
 
                             <i class="fa-brands fa-whatsapp"></i>
                             💅 Manicura
 
                         </a>
 
-                        <a href="https://wa.me/34682008858" class="btn-especialista estetica">
+                        <a href="#" class="btn-especialista estetica">
 
                             <i class="fa-brands fa-whatsapp"></i>
                             ✨ Estética
