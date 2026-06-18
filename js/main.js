@@ -27,9 +27,9 @@ const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 50){
+    if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
-    }else{
+    } else {
         navbar.classList.remove("scrolled");
     }
 
@@ -41,7 +41,7 @@ const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
 
@@ -67,5 +67,17 @@ faqItems.forEach(item => {
         item.classList.toggle("active");
 
     });
+
+});
+
+const hamburger =
+    document.querySelector(".hamburger");
+
+const menu =
+    document.querySelector(".menu");
+
+hamburger.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
 
 });
