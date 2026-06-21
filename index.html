@@ -11,6 +11,7 @@
         content="Centro de estética especializado en manicura, pedicura, tratamientos faciales, pestañas y cejas.">
     <meta property="og:image" content="img/real-logo.jpeg">
     <meta property="og:type" content="website">
+    <meta name="format-detection" content="telephone=no">
 
     <title>Centro Estético Real Beauty | Estética en Santander</title>
 
@@ -45,7 +46,7 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
 
-            <a class="btn-nav" href="https://wa.me/34682008858">
+            <a class="btn-nav" href="#reserva">
                 Reservar cita
             </a>
 
@@ -77,7 +78,7 @@
 
             <div class="hero-buttons">
 
-                <a class="btn-primary" href="https://wa.me/34682008858">
+                <a class="btn-primary" href="#reserva">
                     Reservar cita
                 </a>
 
@@ -92,7 +93,7 @@
             <div class="stats">
 
                 <div class="stat">
-                    <h3>4.9★</h3>
+                    <h3>4.8★</h3>
                     <p>Valoración media</p>
                 </div>
 
@@ -102,7 +103,7 @@
                 </div>
 
                 <div class="stat">
-                    <h3>3</h3>
+                    <h3>6</h3>
                     <p>Categorías de servicio</p>
                 </div>
 
@@ -463,7 +464,7 @@
 
                     <div class="servicio-item">
                         <span>Axilas</span>
-                        <span>35€</span>
+                        <span>10€</span>
                     </div>
 
                     <div class="servicio-item">
@@ -637,15 +638,30 @@
                     Consúltanos sin compromiso.
                 </p>
 
-                <a href="https://wa.me/34682008858" class="btn-whatsapp-services">
+            </div>
+
+            <div class="services-cta-buttons">
+
+                <a href="https://wa.me/34634370162?text=Hola,%20tengo%20dudas%20sobre%20los%20servicios%20de%20manicura."
+                    class="btn-consulta manicura">
 
                     <i class="fa-brands fa-whatsapp"></i>
+                    💅 Manicura
 
-                    Reservar por WhatsApp
+                </a>
+
+                <a href="https://wa.me/34682008858?text=Hola,%20tengo%20dudas%20sobre%20los%20servicios%20de%20estética."
+                    class="btn-consulta estetica">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    ✨ Estética
 
                 </a>
 
             </div>
+    </div>
+
+
 
     </div>
 
@@ -703,7 +719,7 @@
                     <li>Formación continua en nuevas técnicas</li>
                 </ul>
 
-                <a href="https://wa.me/34682008858" class="about-btn">
+                <a href="#reserva" class="about-btn">
                     RESERVA TU CITA
                 </a>
 
@@ -739,17 +755,17 @@
 
             <div class="galeria-item">
 
-                <img src="img/gal-13.jpg" alt="Manicura">
+                <img src="img/diseno-cejas-henna.png" alt="Diseño de cejas con Henna">
 
                 <div class="galeria-overlay">
-                    <span>MANICURA</span>
+                    <span>Depilación y Diseño de cejas con Henna</span>
                 </div>
 
             </div>
 
             <div class="galeria-item">
 
-                <img src="img/gal-01.jpg" alt="Manicura Diseño">
+                <img src="img/gal-01.jpg" alt="MANICURA DISEÑO">
 
                 <div class="galeria-overlay">
                     <span>MANICURA DISEÑO</span>
@@ -759,10 +775,10 @@
 
             <div class="galeria-item">
 
-                <img src="img/gal-15.jpg" alt="MANICURA FRANCESA">
+                <img src="img/hydragloss-lips.png" alt="Hydra Lips Gloss">
 
                 <div class="galeria-overlay">
-                    <span>MANICURA FRANCESA</span>
+                    <span>Hydra Lips Gloss</span>
                 </div>
 
             </div>
@@ -799,10 +815,10 @@
 
             <div class="galeria-item">
 
-                <img src="img/gal-17.jpg" alt="lIFTING PESTAÑAS">
+                <img src="img/lifting-coreano.png" alt="lIFTING Coreano">
 
                 <div class="galeria-overlay">
-                    <span>lIFTING PESTAÑAS</span>
+                    <span>lIFTING Coreano + Tradicional</span>
                 </div>
 
             </div>
@@ -849,7 +865,7 @@
 
             <div class="rating">
                 ★★★★★
-                <span>4.75 / 5</span>
+                <span>4.8 / 5</span>
                 <small>basado en opiniones reales</small>
             </div>
 
@@ -1134,7 +1150,7 @@
             </div>
 
             <!-- DERECHA -->
-            <div class="contacto-formulario">
+            <div class="contacto-formulario" id="reserva">
 
                 <h3>Solicitar cita</h3>
 
@@ -1230,13 +1246,24 @@
     </section>
 
 
-    <script src="js/main.js"></script>
 
     <a href="https://wa.me/34682008858" class="whatsapp-float" target="_blank">
 
         <i class="fa-brands fa-whatsapp"></i>
 
     </a>
+
+    <div id="lightbox">
+
+        <span id="cerrar">&times;</span>
+
+        <img id="lightbox-img">
+
+    </div>
+
+
+    
+    <script src="js/main.js"></script>
 
 </body>
 
