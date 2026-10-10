@@ -93,7 +93,7 @@
             <div class="stats">
 
                 <div class="stat">
-                    <h3>4.8★</h3>
+                    <h3>4.9★</h3>
                     <p>Valoración media</p>
                 </div>
 
@@ -199,8 +199,8 @@
                     CORPORAL
                 </button>
 
-                <button class="tab-btn" data-tab="pestañas y cejas">
-                    PESTAÑAS Y CEJAS
+                <button class="tab-btn" data-tab="pestañas, cejas y labios">
+                    PESTAÑAS, CEJAS Y LABIOS
                 </button>
 
                 <button class="tab-btn" data-tab="Depilacion">
@@ -276,14 +276,16 @@
                         <span>50€</span>
                     </div>
 
-                    <div class="servicio-item">
+                    <div class="servicio-item"
+                         data-video="img/radiofreq.mp4"
+                         data-descripcion="Un rostro más firme, terso y rejuvenecido. Descubre la radiofrecuencia tripolar en Real Beauty.">
                         <span>Radiofrecuencia Tripolar Face</span>
                         <span>75€</span>
                     </div>
 
                     <div class="servicio-item">
                         <span>Dual Roller Face 3D</span>
-                        <span>75€</span>
+                        <span>80€</span>
                     </div>
 
                 </div>
@@ -414,7 +416,7 @@
 
             </div>
 
-            <div class="tab-content" id="pestañas y cejas">
+            <div class="tab-content" id="pestañas, cejas y labios">
 
                 <div class="servicios-grid">
 
@@ -428,7 +430,9 @@
                         <span>40€</span>
                     </div>
 
-                    <div class="servicio-item">
+                    <div class="servicio-item"
+                         data-imagen="img/coreano-lifting.jpeg"
+                         data-descripcion="El lifting coreano es una técnica de laminación de pestañas que prioriza la salud y nutrición del vello natural">
                         <span>Lifting coreano + Tinte</span>
                         <span>50€</span>
                     </div>
@@ -446,6 +450,20 @@
                     <div class="servicio-item">
                         <span>Extensión Megavolumen</span>
                         <span>80€</span>
+                    </div>
+
+                    <div class="servicio-item"
+                         data-imagen="img/micropigmentacion_cejas.jpeg"
+                         data-descripcion="La micropigmentación de cejas es una técnica estética semipermanente que consiste en implantar pigmentos en la capa superficial de la piel para definir, rellenar y mejorar la forma de las cejas.">
+                        <span>Micropimentación de Cejas con Retoque</span>
+                        <span>175€</span>
+                    </div>
+
+                    <div class="servicio-item"
+                         data-video="img/microlabios.mp4"
+                         data-descripcion="La micropigmentación de labios es una técnica de maquillaje semipermanente que consiste en la implantación de pigmentos en la capa epidérmica o superficial de la piel de los labios mediante microagujas o un dermógrafo. ">
+                        <span>Micropimentación de Labios </span>
+                        <span>150€</span>
                     </div>
 
                     <div class="servicio-item">
@@ -927,7 +945,7 @@
 
             <div class="rating">
                 ★★★★★
-                <span>4.8 / 5</span>
+                <span>4.9 / 5</span>
                 <small>basado en opiniones reales</small>
             </div>
 
@@ -1188,7 +1206,7 @@
                     <h4>🕒 HORARIO</h4>
 
                     <p>
-                        Lunes: 15:00 - 20:00<br>
+                        Lunes: 17:00 - 20:00<br>
                         Martes - Viernes: 10:00 - 20:00<br>
                         Sábados: 10:00 - 15:00<br>
                         Domingos: Cerrado
@@ -1201,7 +1219,7 @@
                     <h4>📧 EMAIL</h4>
 
                     <p>
-                        info@centrorealbeauty.es
+                        info@realbeautysantander.com
                     </p>
 
                 </div>
@@ -1324,8 +1342,40 @@
     </div>
 
 
+    <div class="servicios-overlay" id="serviciosOverlay">
+
+        <div class="servicios-modal">
+
+            <button class="servicios-cerrar" id="serviciosCerrar">
+                &times;
+            </button>
+
+            <div class="servicios-media" id="serviciosMedia">
+
+            <video id="serviciosVideo" controls playsinline></video>
+
+            <img id="serviciosImagen" src="" alt="">
+
+            </div>
+
+
+            <div class="servicios-info">
+
+                <h2 id="serviciosTitulo"></h2>
+
+                <p id="serviciosDescripcion"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
     
     <script src="js/main.js"></script>
+
+
 
 </body>
 
@@ -1395,7 +1445,9 @@
 
             <p>✨ Rossi: 682 00 88 58</p>
 
-            <p>🕒 Lun-Vie 10:00 - 20:00</p>
+            <p>🕒 Lun 17:00 - 20:00</p>
+
+            <p>🕒 Mar-Vie 10:00 - 20:00</p>
 
             <p>🕒 Sábados 10:00 - 15:00</p>
 

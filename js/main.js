@@ -185,3 +185,111 @@ document.addEventListener('keydown', (e) => {
     }
 
 });
+
+
+
+const servicios = document.querySelectorAll('.servicio-item');
+
+const serviciosOverlay = document.getElementById('serviciosOverlay');
+
+const serviciosVideo = document.getElementById('serviciosVideo');
+const serviciosImagen = document.getElementById('serviciosImagen');
+
+const serviciosTitulo = document.getElementById('serviciosTitulo');
+const serviciosDescripcion = document.getElementById('serviciosDescripcion');
+
+const serviciosCerrar = document.getElementById('serviciosCerrar');
+
+
+servicios.forEach(servicio => {
+
+    servicio.addEventListener('click', () => {
+
+        const video = servicio.dataset.video;
+        const imagen = servicio.dataset.imagen;
+        const descripcion = servicio.dataset.descripcion;
+
+        // Si no tiene vídeo, imagen ni descripción, no hacemos nada
+        if (!video && !imagen && !descripcion) {
+            return;
+        }
+
+        const nombre = servicio.querySelector('span').textContent;
+
+        serviciosTitulo.textContent = nombre;
+        serviciosDescripcion.textContent = descripcion || '';
+
+
+        // Resetear vídeo e imagen
+        serviciosVideo.classList.remove('active');
+        serviciosImagen.classList.remove('active');
+
+        serviciosVideo.pause();
+        serviciosVideo.removeAttribute('src');
+        serviciosVideo.load();
+
+        serviciosImagen.removeAttribute('src');
+
+
+        // Si tiene vídeo
+        if (video) {
+
+            serviciosVideo.src = video;
+            serviciosVideo.classList.add('active');
+
+        }
+
+        // Si tiene imagen
+        else if (imagen) {
+
+            serviciosImagen.src = imagen;
+            serviciosImagen.classList.add('active');
+
+        }
+
+
+        // Mostrar overlay
+        serviciosOverlay.classList.add('active');
+
+    });
+
+});
+
+
+function cerrarServicios() {
+
+    serviciosOverlay.classList.remove('active');
+
+    serviciosVideo.pause();
+    serviciosVideo.removeAttribute('src');
+    serviciosVideo.load();
+
+    serviciosImagen.removeAttribute('src');
+
+    serviciosVideo.classList.remove('active');
+    serviciosImagen.classList.remove('active');
+
+}
+
+
+serviciosCerrar.addEventListener('click', cerrarServicios);
+
+
+// Cerrar haciendo clic fuera
+serviciosOverlay.addEventListener('click', (e) => {
+
+    if (e.target === serviciosOverlay) {
+        cerrarServicios();
+    }
+
+});
+
+
+// Cerrar con ESC
+document.addEventListener('keydown', (e) => {
+
+    if (e.key === 'Escape' && serviciosOverlay.classList.contains('active')) {
+        cerrarServicios();
+    }
+
+});
